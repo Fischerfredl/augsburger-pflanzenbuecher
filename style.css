@@ -7,44 +7,86 @@ html, body {
 }
 
 .header {
-  height: 70px;
   background-color: #efdbc1;
 }
 
 .wappen {
-  float: left;
   height: 50px;
   padding: 10px;
 }
 
 .uni {
-  float: right;
   height: 50px;
   padding: 10px;
 }
 
-.container {
-  background-image: url('images/bg_page_30.jpg');
-  background-repeat: repeat-y;
-  background-size: 100%;
-  width: 100%;
-  min-height: calc(100% - 80px);
+.navigation {
+  background-color: #efdbc1;
 }
 
-.content {
-  width: 65%;
-  margin: 0 auto;
-  padding: 70px 0;
+.title-image {
+  position: relative;
 }
 
-@media (min-width: 50em) { 
-  h1 {
-    font-size: 4rem;
-  }
+.title-text-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.title-text-content {
+  color: white;
+  text-align: right;
+  padding: 10px;
+  margin: 20px 20px;
+  background-color: rgba(0, 0, 0, .5)
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page {
+    margin: 20px auto;
+    padding: 40px 60px;
+    border-radius: 10px;
+    
+    box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    
   
-  p {
-    font-size: 2rem;
-  }
-
+    background: url('images/bg_page_30.jpg');
+    background-size: cover;                      /* <------ */
 }
+
+.page:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* 
+Extra small devices (portrait phones, less than 544px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+h1 {font-size:1rem;} /*1rem = 16px*/
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+  h1 {font-size:1.5rem;} /*1rem = 16px*/
+}
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  h1 {font-size:2rem;} /*1rem = 16px*/
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  h1 {font-size:2.5rem;} /*1rem = 16px*/
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  h1 {font-size:3rem;} /*1rem = 16px*/    
+}
+
+
 
