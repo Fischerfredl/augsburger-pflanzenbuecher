@@ -4,35 +4,45 @@ html, body {
   height: 100%;
   min-width: 320px;
   font-family: sans-serif;
+  background-color: #f8f8f8;
 }
 
-.header {
+a {
+  color: #a8540b;
+}
+
+a:hover {
+  color: #3c1e04;
+}
+
+.bg-brown {
   background-color: #efdbc1;
 }
 
-.wappen {
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* header-logos */
+
+.logo {
   height: 50px;
   padding: 10px;
 }
 
-.uni {
-  height: 50px;
-  padding: 10px;
-}
-
-.navigation {
-  background-color: #efdbc1;
-}
+/* header-title */
 
 .title-image {
   position: relative;
 }
 
 .title-text-container {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .title-text-content {
@@ -43,50 +53,88 @@ html, body {
   background-color: rgba(0, 0, 0, .5)
 }
 
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/* header-navigation */
+
+.navigation {
+  background-color: #efdbc1;
+  text-align: center;
 }
 
+.navigation a {
+  color: #3c1e04;
+  font-size: 1.4rem;
+  display: block;
+  padding: 5px 0;
+}
+
+/* content */
+
 .page {
-    margin: 20px auto;
-    padding: 40px 60px;
-    border-radius: 10px;
-    
-    box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    
-  
-    background: url('images/bg_page_30.jpg');
-    background-size: cover;                      /* <------ */
+  margin: 30px auto;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.23);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  background: url('images/bg_page_30.jpg');
+  background-size: cover;
 }
 
 .page:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
+
+/* footer */
+
+.footer {
+  padding: 25px;
+}
+
+/* breakpoints */
 
 /* 
 Extra small devices (portrait phones, less than 544px) 
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
-h1 {font-size:1rem;} /*1rem = 16px*/
+
+h1 {
+  font-size: 1.2rem;
+}
+
 /* Small devices (landscape phones, 544px and up) */
-@media (min-width: 544px) {  
-  h1 {font-size:1.5rem;} /*1rem = 16px*/
+
+@media (min-width: 544px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .page {
+    padding: 40px 60px;
+  }
+  /*1rem = 16px*/
 }
+
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
-  h1 {font-size:2rem;} /*1rem = 16px*/
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  /*1rem = 16px*/
 }
+
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-  h1 {font-size:2.5rem;} /*1rem = 16px*/
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  /*1rem = 16px*/
 }
+
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-  h1 {font-size:3rem;} /*1rem = 16px*/    
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+  }
+  /*1rem = 16px*/
 }
-
-
-
