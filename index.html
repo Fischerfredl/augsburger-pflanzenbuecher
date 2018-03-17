@@ -111,27 +111,16 @@
         <h1>Anfahrt</h1>
         <hr>
         <p>So gelangt ihr zur Ausstellung:</p>
-
-        <p><b>Anschrift</b><br> Botanischer Garten<br> Dr.-Ziegenspeck-Weg 10<br> 86161 Augsburg<br></p>
-        <hr>
-        <div id="map"></div>
-        <script>
-          function initMap() {
-            var botGarten = {
-              lat: 48.3490119,
-              lng: 10.9128865
-            };
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 4,
-              center: botGarten
-            });
-            var marker = new google.maps.Marker({
-              position: botGarten,
-              map: map
-            });
-          }
-        </script>
-
+        <div class="row">
+          <div class="col-md-7 col-lg-8">
+            <div class="google-maps">
+              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCM0OxQvCtiRarBl0YOSzerZSHJOrnrYRE&q=Botanischer+Garten+Augsburg" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-4">
+            <p><b>Anschrift</b><br> Botanischer Garten<br> Dr.-Ziegenspeck-Weg 10<br> 86161 Augsburg<br></p>
+          </div>
+        </div>
       </div>
       <!-- end of 5. anfahrt -->
 
@@ -144,10 +133,6 @@
       <div><b>Website: Alfred Melch BSc</b> - alfred.melch&lt;at&gt;gmx.de</div>
     </div>
     <!-- end of footer -->
-
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIfthPjeLKOJTcq1lQCc_0RiVv3jpWd54&callback=initMap">
-    </script>
   </body>
 
 </html>

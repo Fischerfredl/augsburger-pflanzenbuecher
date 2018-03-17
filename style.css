@@ -38,6 +38,10 @@ a:hover {
   position: relative;
 }
 
+.title-image img {
+  min-height: 200px;
+}
+
 .title-text-container {
   position: absolute;
   left: 0;
@@ -62,7 +66,7 @@ a:hover {
 
 .navigation a {
   color: #3c1e04;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   display: block;
   padding: 5px 0;
 }
@@ -96,11 +100,28 @@ Extra small devices (portrait phones, less than 544px)
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
 
-h1 {
-  font-size: 1.2rem;
+.google-maps {
+  position: relative;
+  /* aspect ratio */
+  padding-bottom: 100%;
+  height: 0;
+  overflow: hidden;
 }
+
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
 #map {
-  height: 300px;
+  height: 250px;
 }
 
 /* Small devices (landscape phones, 544px and up) */
