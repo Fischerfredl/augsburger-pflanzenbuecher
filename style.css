@@ -36,6 +36,7 @@ a:hover {
   top: 0;
   width: 100%;
   min-width: 320px;
+  z-index: 1;
 }
 
 /* header-logos */
