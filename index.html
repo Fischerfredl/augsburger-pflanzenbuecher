@@ -40,12 +40,12 @@
       <!-- end of title-image -->
 
       <!-- NAVIGATION -->
-      <div class="row navigation">
-        <div class="col"><a href="/">Willkommen</a></div>
-        <div class="col"><a href="/">Neugierig?</a></div>
-        <div class="col"><a href="/">Links</a></div>
-        <div class="col"><a href="/">Öffnungszeiten</a></div>
-        <div class="col"><a href="/">Anfahrt</a></div>
+      <div id="navigation" class="row text-center bg-brown">
+        <div class="col"><a href="#willkommen">Willkommen</a></div>
+        <div class="col"><a href="#neugierig">Neugierig?</a></div>
+        <div class="col"><a href="#links">Links</a></div>
+        <div class="col"><a href="#oeffnungszeiten">Öffnungszeiten</a></div>
+        <div class="col"><a href="#anfahrt">Anfahrt</a></div>
       </div>
       <!-- end of navigation -->
     </div>
@@ -56,6 +56,7 @@
 
       <!-- 1. WILLKOMMEN -->
       <div class="page">
+        <a id="willkommen" class="nav-anchor"></a>
         <h1>Willkommen</h1>
         <hr>
         <p>Willkommen zur Ausstellung "Augsburger Pflanzenbücher" vom 1 August bis 16. September. Auf unserer Homepage befinden sich aktuelle Termine zu Vorträgen und Führungen, sowie Informationen zur Ausstellung</p>
@@ -68,6 +69,7 @@
 
       <!-- 2.  -->
       <div class="page">
+        <a id="neugierig" class="nav-anchor"></a>
         <h1>Neugierig?</h1>
         <hr>
         <p>Die Ausstellung ist ein interdisziplinäres Projekt zwischen dem Botanischen Garten Augsburg und der Universität Augsburg. Von der Stadt- und Staatsbibliothek und der Unitätsbibliothek bekamen wir verschiedene Kräuter- und Pflanzenbücher zur Verfügung
@@ -79,6 +81,7 @@
 
       <!-- 3. LINKS -->
       <div class="page">
+        <a id="links" class="nav-anchor"></a>
         <h1>Links unserer Partner</h1>
         <hr>
         <ul>
@@ -92,6 +95,7 @@
 
       <!-- 4. ÖFFNUNGSZEITEN -->
       <div class="page">
+        <a id="oeffnungszeiten" class="nav-anchor"></a>
         <h1>Öffnungszeiten</h1>
         <hr>
         <div class="d-flex justify-content-around">
@@ -108,6 +112,7 @@
 
       <!-- 5. ANFAHRT -->
       <div class="page">
+        <a id="anfahrt" class="nav-anchor"></a>
         <h1>Anfahrt</h1>
         <hr>
         <p>So gelangt ihr zur Ausstellung:</p>
@@ -133,6 +138,37 @@
       <div><b>Website: Alfred Melch BSc</b> - alfred.melch&lt;at&gt;gmx.de</div>
     </div>
     <!-- end of footer -->
+
+    <script>
+      nav = document.getElementById('navigation')
+
+      var sticky = nav.offsetTop
+      window.onscroll = function() {
+        // set new sticky threshold when navigation not on top of window
+        if (nav.offsetTop != 0) {
+          sticky = nav.offsetTop
+        }
+
+        // toggle sticky state
+        if (window.pageYOffset >= sticky) {
+          nav.classList.add("sticky")
+        } else {
+          nav.classList.remove("sticky")
+        }
+      }
+
+      function setAnchorOffset() {
+        var offset = (-1) * (nav.offsetHeight + 55)
+        console.log(offset)
+        document.querySelectorAll('.nav-anchor').forEach(function(ele) {
+          ele.setAttribute("style", "top: " + offset + "px;")
+        })
+      }
+
+      window.onresize = setAnchorOffset
+      setAnchorOffset()
+    </script>
+
   </body>
 
 </html>
