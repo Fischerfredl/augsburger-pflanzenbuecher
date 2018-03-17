@@ -99,6 +99,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 h1 {
   font-size: 1.2rem;
 }
+#map {
+  height: 300px;
+}
 
 /* Small devices (landscape phones, 544px and up) */
 
