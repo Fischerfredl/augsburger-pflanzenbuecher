@@ -52,7 +52,7 @@
     <!-- end of header -->
 
     <!-- CONTENT -->
-    <div class="container">
+    <div id="content" class="container">
 
       <!-- 1. WILLKOMMEN -->
       <div class="page">
@@ -140,7 +140,8 @@
     <!-- end of footer -->
 
     <script>
-      nav = document.getElementById('navigation')
+      var nav = document.getElementById('navigation')
+      var content = document.getElementById('content')
 
       var sticky = nav.offsetTop
       window.onscroll = function() {
@@ -151,8 +152,10 @@
 
         // toggle sticky state
         if (window.pageYOffset >= sticky) {
+          content.style.paddingTop = nav.offsetHeight + 'px'
           nav.classList.add("sticky")
         } else {
+          content.style.paddingTop = '0px'
           nav.classList.remove("sticky")
         }
       }
