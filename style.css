@@ -42,7 +42,7 @@ a:hover {
 /* header-logos */
 
 .logo {
-  height: 70px;
+  height: 90px;
   padding: 10px;
 }
 
@@ -108,8 +108,8 @@ a:hover {
 
 /* breakpoints */
 
-/* 
-Extra small devices (portrait phones, less than 544px) 
+/*
+Extra small devices (portrait phones, less than 544px)
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
 
