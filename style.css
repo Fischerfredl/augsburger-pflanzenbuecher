@@ -46,6 +46,20 @@ a:hover {
   padding: 10px;
 }
 
+.plakat {
+  width: 100%;
+}
+
+.plakat-container {
+  padding: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.23);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.plakat-container:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 /* header-title */
 
 .title-image {
