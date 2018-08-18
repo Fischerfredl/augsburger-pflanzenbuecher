@@ -148,6 +148,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 h1 {
   font-size: 1.6rem;
 }
+h3{
+  front-size:1.0rem;
+}
 
 #map {
   height: 250px;
