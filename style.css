@@ -4,7 +4,10 @@ html, body {
   height: 100%;
   min-width: 320px;
   font-family: sans-serif;
+  text-align: justify;
   background-color: #f8f8f8;
+  ul{text-align: justify};
+
 }
 
 a.nav-anchor {
